@@ -150,10 +150,10 @@ if __name__ == '__main__':
 		image = hair(image, parsing, part, color)
 
 		cv2.imwrite('new_makeup.png',image)   
-		# if os.path.exists(image_path):
-			# os.remove(image_path)
-		# else:
-			# print("The file does not exist")
+		if os.path.exists(image_path):
+			os.remove(image_path)
+		else:
+			print("The file does not exist")
 		print ("done")
 		cv2.imshow('image', ori)
 		cv2.imshow('color', image)
